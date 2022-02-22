@@ -1,15 +1,11 @@
      
 require 'sinatra'
-require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
+require 'pry' if development?
 require 'pg'
 require 'bcrypt'
 
-def run_sql(sql, sql_params = [])
-  db = PG.connect(dbname: 'elektronik')
-  result = db.exec_params(sql, sql_params)
-  db.close
-  result
-end
+require_relative 'db/db'
 
 get '/' do
   musics = run_sql("SELECT * FROM music")
@@ -26,7 +22,8 @@ post '/music' do
   name = params["name"]
   genre = params["genre"]
   artist = params["artist"]
-  cover = params["cover"]
+  cover_url = params["cover_url"]
+  track_url = params["track_url"]
 
   run_sql("INSERT INTO music(name, genre, artist, cover) VALUES ($1, $2, $3, $4)", [name, genre, artist, cover])
 
