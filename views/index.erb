@@ -1,0 +1,24 @@
+<header>
+    <h3>Elektronik</h3>
+
+
+
+</header>
+<span>
+    <a href="/music">Add a Track</a>
+
+</span>
+<% musics.each do |music| %>
+<div class = "track_list" >
+    <ul>
+        <%= music["name"]%>
+        <%= music["genre"]%>
+        <%= music["artist"]%>
+        <img src="<%= music["cover"]%>" alt="">
+        
+        <% end %>
+
+    
+    </ul>
+
+</div>
