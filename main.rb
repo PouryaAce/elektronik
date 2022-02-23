@@ -2,32 +2,23 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pry' if development?
-require 'pg'
 require 'bcrypt'
+
+enable :sessions
 
 require_relative 'db/db'
 
-get '/' do
-  musics = run_sql("SELECT * FROM music")
-  erb :index, locals: {
-    musics: musics
-  }
-end
+require_relative 'models/music'
+require_relative 'models/user'
 
-get '/music' do
-  erb :music 
-end
 
-post '/music' do
-  name = params["name"]
-  genre = params["genre"]
-  artist = params["artist"]
-  cover_url = params["cover_url"]
-  track_url = params["track_url"]
 
-  run_sql("INSERT INTO music(name, genre, artist, cover) VALUES ($1, $2, $3, $4)", [name, genre, artist, cover])
+require_relative 'controllers/music_controllers'
+require_relative 'controllers/user_controllers'
+require_relative 'controllers/sessions_controllers'
 
-  redirect '/'
-end
+
+
+require_relative 'helpers/sessions_helper'
 
 

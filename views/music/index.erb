@@ -1,0 +1,84 @@
+
+
+<% if logged_in? %>
+    <main class="main-sec">
+    
+        <header class = "logged-in-header">
+    <h1>Let's Get Ele㉿troni㉿ <%= current_user['username'] %> ▷</h1>
+    <form action="/sessions" method="POST">
+    
+        <input type="hidden" name="_method" value="delete">
+        <button class = "log-out-button">Log Out</button>
+    
+    </form>
+    
+    </header>
+    
+
+    <span class = "head">
+    <h2><a href="/about">About us</a></h2>
+    <h2><a href="/music">Add Track</a></h2>
+    <h2><a href="/tracks">All Tracks</a></h2>
+    
+
+    </span>
+
+
+
+<section class="boxes">
+
+    <% users_music.each do |music| %>
+    <div class = "track_list" >
+        <ul class = "track_ul">
+            <li>Name:<%= music["name"]%></li>
+            <li>Genre:<%= music["genre"]%></li>
+            <li>Artist:<%= music["artist"]%></li>
+            
+        </ul>
+     
+    <%= music["track"] %>
+    
+     <form action="/music/<%= music['id'] %>" class="delete" method = "POST">
+        <input type="hidden" name="_method" value="delete">
+
+        <button>delete</button>
+
+
+    </form>
+     <a href="/music/<%= music['id'] %>/edit">Edit</a>
+    </div>
+
+<% end %>
+        
+</section>
+    
+    
+    </main>
+    <footer>
+    
+        <p class="copyright-login">All Rights Reserved ㉿ Pourya-Ace</p>
+    
+    </footer>
+<% else %>
+<header class = "first_page">
+    <h1>Ele㉿troni㉿ ▷</h1>
+    <h2><a href="/about">About Us</a></h2>
+    <h2><a href="/sign_up">Sign Up</a></h2>
+    <h2><a href="/login">Log In</a></h2>
+
+    
+
+
+</header>
+
+<footer>
+    
+        <p class="copyright">All Rights Reserved ㉿ Pourya-Ace</p>
+    
+</footer>
+
+<% end %>
+
+
+
+
