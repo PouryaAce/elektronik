@@ -10,5 +10,5 @@ get '/sign_up' do
   
     create_user(name, email, username, password)
   
-    redirect '/'
+    redirect '/login'
   end
