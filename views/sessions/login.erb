@@ -14,12 +14,13 @@
     <form action="/sessions" class="login" method= "POST">
         
         <label for="">Username</label>
-        <input type="text" name = "username">
+        <input type="text" name = "username" required>
 
         <label for="">Password</label>
-        <input type="password" name = "password">
+        <input type="password" name = "password" required>
 
-        <button>Log In</button>
+        <button onclick="play()">Log In</button>
+        <audio id="audio" src="/media/audio/mixkit-quick-win-video-game-notification-269.wav"></audio>
 
 
 
@@ -27,7 +28,7 @@
 
 </section>
 <div class="error">
-
+    
         <%= error_message %>
     
 </div>
@@ -43,3 +44,4 @@
         <p class="copyright-login">All Rights Reserved ㉿ Pourya-Ace</p>
     
 </footer>
+

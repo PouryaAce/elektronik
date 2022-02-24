@@ -8,7 +8,8 @@
     <form action="/sessions" method="POST">
     
         <input type="hidden" name="_method" value="delete">
-        <button class = "log-out-button">Log Out ⏏︎</button>
+        <button onclick="play()" class = "log-out-button">Log Out ⏏︎</button>
+        <audio id="audio" src="/media/audio/mixkit-quick-win-video-game-notification-269.wav"></audio>
     
     </form>
     
@@ -41,7 +42,8 @@
      <form action="/music/<%= music['id'] %>" class="delete" method = "POST">
         <input type="hidden" name="_method" value="delete">
 
-        <button>delete</button>
+        <button onclick="play()">delete</button>
+        <audio id="audio" src="/media/audio/mixkit-quick-win-video-game-notification-269.wav"></audio>
 
 
     </form>

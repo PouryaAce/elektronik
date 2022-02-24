@@ -20,7 +20,7 @@ post '/sessions' do
     redirect'/'
   else
     erb :'sessions/login', locals: {
-      error_message: "Invalid username or password"
+      error_message: "△△ Invalid username or password △△"
     } 
 
   end

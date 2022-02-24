@@ -15,10 +15,8 @@ body {
 }
 .boxes {
   width: 100%;
-  /* display: flex; */
   display: grid;
   gap: 10px;
-  /* flex-direction: row; */
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .add {
@@ -45,6 +43,10 @@ button {
   background-color: rgb(77, 76, 76);
   color: aliceblue;
   font-family: "Audiowide", cursive;
+  cursor: pointer;
+}
+button:active {
+  font-size: 12px;
 }
 a {
   color: rgb(77, 76, 76);
@@ -57,16 +59,6 @@ a:hover {
   animation-duration: 3s;
   animation-name: slidein;
 }
-/* @keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-} */
 .first_page h1 {
   font-size: 60px;
   transform: rotate(-15deg);
@@ -181,9 +173,7 @@ a:hover {
 @media only screen and (min-width: 1250px) {
   .boxes {
     width: 100%;
-    /* display: flex; */
     display: grid;
-    /* flex-direction: row; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .track_list {
@@ -198,10 +188,8 @@ a:hover {
 @media only screen and (max-width: 1250px) {
   .boxes {
     width: 100%;
-    /* display: flex; */
     display: grid;
     gap: 10px;
-    /* flex-direction: row; */
     grid-template-columns: 1fr 1fr 1fr;
   }
   .track_list {
@@ -216,10 +204,8 @@ a:hover {
 @media only screen and (max-width: 930px) {
   .boxes {
     width: 100%;
-    /* display: flex; */
     display: grid;
     gap: 10px;
-    /* flex-direction: row; */
     grid-template-columns: 1fr 1fr;
   }
   .track_list {
@@ -234,10 +220,8 @@ a:hover {
 @media only screen and (max-width: 620px) {
   .boxes {
     width: 100%;
-    /* display: flex; */
     display: grid;
     gap: 5px;
-    /* flex-direction: row; */
     grid-template-columns: 1fr;
   }
   .track_list {

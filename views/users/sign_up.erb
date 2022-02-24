@@ -11,26 +11,30 @@
 
 <section class="signup">
 
-    <form action="/user" class="sign_up">
+    <form action="/user" class="sign_up" method="POST">
         <label for="">Name</label>
-        <input type="text" name = "name">
+        <input type="text" name = "name" required>
         
         <label for="">Email</label>
-        <input type="email" name = "email">
+        <input type="email" name = "email" required>
 
         <label for="">Username</label>
-        <input type="text" name = "username">
+        <input type="text" name = "username" required>
 
         <label for="">Password</label>
-        <input type="password" name = "password">
+        <input type="password" name = "password" required>
 
-        <button>Sign Up</button>
+        <button onclick="play()">Sign Up</button>
+        <audio id="audio" src="/media/audio/mixkit-quick-win-video-game-notification-269.wav"></audio>
 
 
 
     </form>
 
+    
+
 </section>
+
 <div class="reminder">
 
     <a class = "informer" href="/login">Click here if you already a Member</a>
