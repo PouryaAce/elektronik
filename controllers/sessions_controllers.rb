@@ -1,7 +1,9 @@
 
 
 get '/login' do
-    erb :'sessions/login'
+    erb :'sessions/login', locals: {
+      error_message: ""
+    }
     
 end
   
@@ -16,6 +18,11 @@ post '/sessions' do
     session['user_id'] = user['id']
 
     redirect'/'
+  else
+    erb :'sessions/login', locals: {
+      error_message: "Invalid username or password"
+    } 
+
   end
 end
 

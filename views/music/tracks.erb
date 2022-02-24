@@ -1,6 +1,7 @@
-<header>
+<header class = "head-all">
 
     <h1>◀︎Ele㉿troni㉿ Ar㉿ive▶︎</h1>
+    
 
 </header>
 
@@ -8,27 +9,22 @@
 
     <% users_music.each do |music| %>
     <div class = "track_list" >
-        <ul class = "track_ul"> 
-            <li>User:<%= music['username'] %></li>
-            <li>Name:<%= music["name"]%></li>
-            <li>Genre:<%= music["genre"]%></li>
-            <li>Artist:<%= music["artist"]%></li>
+        <ul class = "track_ul">User ㉿<%= music['username'] %>㉿</li>
+            <li>Name ▹ <%= music["name"]%></li>
+            <li>Genre ☮︎ <%= music["genre"]%></li>
+            <li>Artist ✩ <%= music["artist"]%></li>
             
         </ul>
      
     <%= music["track"] %>
     
-     <form action="/music/<%= music['id'] %>" class="delete" method = "POST">
-        <input type="hidden" name="_method" value="delete">
-
-        <button>delete</button>
-
-
-    </form>
-     <a href="/music/<%= music['id'] %>/edit">Edit</a>
     </div>
 
 <% end %>
 
 
+
 </section>
+<p class="home-all">
+    <a href="/">Home</a>
+</p>
