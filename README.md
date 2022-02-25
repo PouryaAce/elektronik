@@ -13,8 +13,6 @@ this app allows users to be able create a playlist using spotify embed tracks le
 there is a section with name , genre and artist of each track as well as the spotify embed link.
 also adding tracks from each user will add the tracks to main playlist of elektronik app which is available for all users it also shows which user uploaded the track to the main playlist.
 
-## cool tech i used
-
 ## Technologies used
 
 <ul>
