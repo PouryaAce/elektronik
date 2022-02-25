@@ -5,7 +5,7 @@ https://elektroniksounds.herokuapp.com/
 
 ## My first full stack project
 
-This web app is built using Ruby Spotify API.
+This web app is built using A full-stack database backed Sinatra application.
 
 ## Description
 
@@ -15,17 +15,34 @@ also adding tracks from each user will add the tracks to main playlist of elektr
 
 ## cool tech i used
 
-working with spotify API was the coolest tech i've used i enjoyed the process a lot.
-process of hashing and deal with users details and keep them safe was fun too.
+## Technologies used
+
+<ul>
+    <li>Sinatra</li>
+    <li>Ruby</li>
+    <li>Postgresql</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Spotify API</li>
+    <li>GitHub</li>
+    <li>Heroku</li>
+</ul>
 
 ## lessons learned
 
-The process of signup and login.
-Working with spotify API.
-New CSS styling tools and methods.
-process of making CRUD app.
+<ul>
+    <li>spotify API</li>
+    <li>hashing</li>
+    <li>CRUD app developing process</li>
+    <li>Heroku</li>
+    <li>New CSS properties</li>
+
+</ul>
 
 ## features to add in future
 
-being able to add different playlists for each user.
-using more unique CSS tools and better styling.
+<ul>
+    <li>Adding different playlists for each user</li>
+    <li>more styiling</li>
+</ul>
